@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="./assets/icons/ps-logo.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Playstation rework</title>
+</head>
+<body>
+
+    <header id="header"  >
+        <div class="header-row ">
+            <div class="desktop-menu-header">
+                <div class="brand-logo">
+                    <a href="#" class="ps-logolink">
+                        <svg class="ps-logo" viewBox="0 0 56 43"  xmlns="http://www.w3.org/2000/svg">
+                            <g id="ps-logo">
+                                <path d="M3.09127 29.9195L19.1081 23.9796V29.5529L9.89293 32.6328C8.47758 33.1999 8.20063 33.6081 8.86903 34.5395C9.6736 35.2728 12.5259 35.1261 14.208 34.5395L19.1081 32.6328V37.4728C17.3528 37.8834 14.7687 37.9861 13.696 37.9861C8.32293 38.0108 2.26378 36.0605 1.26287 35.1261C-0.858049 33.1462 -0.346042 31.2395 3.09127 29.9195Z" />
+                                <path d="M20.9365 0V39.8927L29.8591 42.7527V8.8732C30.0111 7.64563 30.2996 7.1518 31.5412 6.96656C32.4233 6.87688 33.6549 8.2062 33.5891 8.8732V23.9796C34.7752 24.6838 35.5824 24.9052 37.2459 25.0063C41.5378 24.6793 43.4472 23.58 43.755 15.9131C43.7857 10.508 42.4917 8.02842 37.2459 4.83993C31.2146 2.17013 27.604 1.20109 20.9365 0Z" />
+                                <path d="M31.5412 33.5862V28.0862C34.3438 27.2344 36.0077 26.8472 39.3668 26.5463C43.4625 26.1794 47.7776 26.2529 54.2866 28.9662C56.2613 29.7894 57.6509 32.9262 51.8731 35.1261L31.5412 42.3127V36.8861L46.3148 31.7529C48.0818 31.1227 48.2164 30.2862 47.0461 29.9195C45.4372 29.3329 43.8282 29.4062 42.2923 29.9195L31.5412 33.5862Z" />
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+
+                <nav class="navmenu">
+                    <ul class="navmenu-ul">
+                        <li class="menu-item">
+                            <a href="" class="menu-link arrow-icon  relative" id="menu-link1">jogos</a>
+                           
+                            <ul class="dropdown-menu">
+                                <div class="dropdown-menu-bg" id="dropdown-menu-bg1"></div>
+                                <li class="dropdown-item" id="menu-item1">
+                                    <a href="" class="dropdown-menu-link">
+                                        <img class="dropdown-menu-icon ps5-icon" src="./assets/icons/ps5-icon.svg" alt="">
+                                        <span>playstation 5</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" id="menu-item2" >
+                                    <a href="" class="dropdown-menu-link">
+                                        <img class="dropdown-menu-icon ps4-icon" src="./assets/icons/ps4-icon.png" alt="">
+                                        <span>playstation 4</span>
+                                    </a>
+                                </li>
+                                 <li class="dropdown-item " id="menu-item3">
+                                    <a href="" class="dropdown-menu-link">
+                                        <img class="dropdown-menu-icon ps5-icon" src="./assets/icons/psvr-icon.png" alt="">
+                                        <span>playstation vr</span>
+                                    </a>
+                                </li>
+                            </ul>
+                         
+                            
+                        </li>
+                     
+                      <li class="menu-item"> <a href="" class="menu-link">noticias</a></li>
+
+                        <li class="menu-item">
+                            <a href="" class="menu-link arrow-icon relative" id="menu-link2">loja</a>
+                             
+                            <ul class="dropdown-menu">
+                                <div class="dropdown-menu-bg" id="dropdown-menu-bg2"></div>
+                                <li class="dropdown-item" id="menu-item4">
+                                    <a href="" class="dropdown-menu-link">
+                                        <img class="dropdown-menu-icon ps5-icon" src="./assets/icons/ps-store.png" alt="">
+                                        <span>playstation store</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown-item" id="menu-item5" >
+                                    <a href="" class="dropdown-menu-link">
+                                        <img class="dropdown-menu-icon ps4-icon" src="./assets/icons/PSsTARS.png" alt="">
+                                        <span>playstation stars</span>
+                                    </a>
+                                </li>
+                                 
+                            </ul>
+                        </li>
+
+                      <li class="menu-item"> <a href="" class="menu-link">serviços</a></li>
+                      <li class="menu-item"> <a href="" class="menu-link">suporte</a></li>
+
+                    </ul>
+                </nav>
+            </div>
+           
+            <button class="menu-toggle" id="menu-toggle">
+                <svg viewBox="0 0 12 10" class="hamburger" width="40px" height="40px">
+                    <path d="M10,2 L2,2" class="bar-1"></path>
+                    <path d="M2,5 L10,5" class="bar-2"></path>
+                    <path d="M10,8 L2,8" class="bar-3"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="fullpage-menu">
+        <div class="fullpage-menu-inner">
+
+            <div class="menu-bg">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="menu-menu" >
+                <ul class="menu-ul">
+
+                    <div class="wave-bg">
+                        <svg  viewBox="0 0 1920 295" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="fig1-ny">
+                            <path id="wave1" d="M1108.62 99.5445C626.379 96.8043 395.905 -37.4194 2.44936 33.9312L2.33287 240.898L1908.77 241.971L1908.9 16.9057C1600.09 16.7319 1525.31 101.912 1108.62 99.5445Z" fill="url(#paint0_radial_51_265)" stroke="url(#paint1_radial_51_265)" stroke-width="1.66403"/>
+                            <path id="wave2" fill-rule="evenodd" clip-rule="evenodd" d="M4.1084 1.27979L110.448 22.4728C215.2 43.6649 427.879 86.0509 638.999 79.1253C850.116 72.1997 1062.86 15.9644 1273.96 30.172C1512.05 46.1958 1908.85 113.888 1908.85 113.888L1908.79 213.683L1802.44 213.623C1697.67 213.564 1484.97 213.445 1273.86 213.326C1062.75 213.207 850.036 213.087 638.924 212.968C427.808 212.85 215.105 212.73 110.341 212.671L3.98946 212.611L4.1084 1.27979Z" fill="url(#paint2_radial_51_265)" stroke="url(#paint3_radial_51_265)" stroke-width="1.66403"/>
+                            <path id="wave3" fill-rule="evenodd" clip-rule="evenodd" d="M0.260478 222.916L79.6787 211.186C159.097 199.457 317.933 175.998 476.725 193.438C635.516 211.499 794.259 271.08 953.063 282.943C1111.86 295.427 1270.7 259.574 1429.54 236.114C1588.38 212.035 1747.2 200.351 1826.62 194.198L1906.03 188.665L1906.14 81.4579L1826.74 81.4132C1747.33 81.3685 1588.52 81.2791 1429.71 81.1897C1270.9 81.1004 1112.09 81.011 953.283 80.9216C794.473 80.8322 635.66 80.7428 476.849 80.6534C318.038 80.5641 159.227 80.4747 79.8219 80.43L0.416925 80.3853L0.260478 222.916Z" fill="url(#paint4_radial_51_265)" stroke="url(#paint5_radial_51_265)" stroke-width="1.66403"/>
+                            <path id="wave4" fill-rule="evenodd" clip-rule="evenodd" d="M1908.54 93.9081L1829.13 97.3318C1749.73 100.755 1590.9 107.602 1432.08 121.385C1273.25 135.167 1114.42 155.887 955.614 152.329C796.806 148.772 638.025 120.938 479.238 100.04C320.449 79.1424 161.654 65.1806 82.2563 58.1997L2.85845 51.2188L2.69512 246.761L82.1001 246.806C161.505 246.851 320.316 246.94 479.127 247.029C637.937 247.119 796.75 247.208 955.56 247.298C1114.37 247.387 1273.18 247.476 1431.99 247.566C1590.8 247.655 1749.61 247.744 1829.02 247.789L1908.42 247.834L1908.54 93.9081Z" fill="url(#paint6_radial_51_265)" stroke="url(#paint7_radial_51_265)" stroke-width="1.66403"/>
+                            <path id="wave5" fill-rule="evenodd" clip-rule="evenodd" d="M12.9604 293.599L119.449 293.659C224.348 293.718 437.327 293.838 648.729 269.007C860.134 244.176 1073.13 194.395 1284.53 187.386C1495.92 180.376 1708.88 216.139 1813.77 234.02L1920.25 251.901L1920.33 102.2L1813.84 102.14C1708.94 102.081 1495.96 101.962 1284.57 101.843C1073.18 101.724 860.214 101.604 648.823 101.485C437.435 101.366 224.457 101.246 119.557 101.187L13.0687 101.127L12.9604 293.599Z" fill="url(#paint8_radial_51_265)" stroke="url(#paint9_radial_51_265)" stroke-width="1.66403"/>
+                            </g>
+                            <defs>
+                            <radialGradient id="paint0_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(995.999 -58.6568) rotate(92.1897) scale(225.245 830.508)">
+                            <stop stop-color="#4AA6F7" stop-opacity="0.5"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint1_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(981.046 48.8519) rotate(94.8436) scale(184.928 945.823)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint2_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(974.449 -82.3533) rotate(90.0322) scale(217.807 1020.78)">
+                            <stop stop-color="#4AA6F7" stop-opacity="0.4"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint3_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(981.857 21.9792) rotate(98.4312) scale(106.101 938.176)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint4_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(987.347 356.149) rotate(-88.0222) scale(238.404 864.292)">
+                            <stop stop-color="#4AA6F7" stop-opacity="0.3"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint5_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(978.448 265.985) rotate(-98.6152) scale(102.764 938.02)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint6_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(929.606 -35.4064) rotate(93.0666) scale(250.864 880.449)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint7_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(932.312 79.296) rotate(83.8839) scale(144.366 945.375)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint8_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1126.37 308.77) rotate(-89.1398) scale(165.971 869.431)">
+                            <stop stop-color="#4AA6F7" stop-opacity="0.4"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            <radialGradient id="paint9_radial_51_265" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(990.031 267.028) rotate(-96.2488) scale(142.135 945.868)">
+                            <stop stop-color="#4AA6F7"/>
+                            <stop offset="1" stop-color="#366ED1" stop-opacity="0"/>
+                            </radialGradient>
+                            </defs>
+                        </svg>
+                            
+                    </div>
+
+                    <li>
+                        <span class="span-date">Informações Oficiais Da Playstation -
+                            <span class="date" id="day">00</span>
+                            <span class="date"id="month">00</span>
+                            <span class="date" id="year">00</span>
+                        </span>
+                    </li>
+                    
+                    <li>
+                        <span class="span-info1">Sound FX</span >
+                    </li>
+                    <li>
+                        <span class="ps-info">Novo no Share Factory studio! Escolha de uma larga seleção de diversção Sound FX para adicionar o melhor impacto...</span>
+                    </li>
+                    <li>
+                        <div class="logout">
+                            <img class="logout-icon" src="./assets/icons/logout-icon.svg" alt="">
+                            <span>Sair da conta</span> 
+                        </div >
+                    </li>
+                    <li>
+                        <span class="ps-symbols">
+                            <svg width="100" height="24" viewBox="0 0 100 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g id="ps-symbols">
+                                <path id="polygon" fill-rule="evenodd" clip-rule="evenodd" d="M12.8619 0.345717C12.944 0.427073 15.9593 5.4508 19.5491 11.4915C23.1593 17.5322 26.0721 22.5355 26.0311 22.6372C25.9901 22.7186 20.1439 22.7796 13.026 22.7796C5.92862 22.7796 0.0619786 22.7186 0.000440354 22.6372C-0.0405851 22.5355 2.79017 17.4508 6.31836 11.3288C9.82604 5.20673 12.7799 0.264361 12.8619 0.345717V0.345717ZM8.86194 12.8135C6.74913 16.6169 5.02606 19.7694 5.02606 19.8305C5.02606 19.8915 8.6363 19.9322 13.026 19.9322C17.4157 19.9322 21.026 19.9118 21.026 19.8915C21.026 19.8508 19.1593 16.6983 16.8619 12.8745L12.6773 5.9186L8.86194 12.8135Z" fill="#20B292"/>
+                                <path id="circle" fill-rule="evenodd" clip-rule="evenodd" d="M37.8465 0C38.9747 0 40.308 0.142373 41.026 0.325424C41.7029 0.488136 42.8516 0.915254 43.5695 1.28136C44.2875 1.64746 45.4362 2.44068 46.1131 3.05085C46.79 3.66102 47.6926 4.71864 48.1234 5.38983C48.5746 6.06102 49.1695 7.34237 49.4772 8.23729C49.908 9.57966 50.0105 10.2508 50.0105 12C50.0105 13.7492 49.908 14.4203 49.4772 15.7627C49.1695 16.6576 48.5746 17.939 48.1234 18.6102C47.6926 19.2814 46.79 20.339 46.1131 20.9492C45.4362 21.5593 44.2875 22.3525 43.5695 22.7186C42.8516 23.0847 41.7029 23.5119 41.026 23.6746C40.3285 23.8576 38.9542 24 37.8875 24C36.4516 24 35.6106 23.878 34.4209 23.4915C33.5388 23.2271 32.267 22.6373 31.5901 22.2102C30.9132 21.7831 29.8465 20.8881 29.2311 20.2169C28.6158 19.5458 27.8158 18.4475 27.4465 17.7966C27.0773 17.1254 26.6055 15.8441 26.3594 14.9492C26.1337 14.0542 25.9491 12.7322 25.9491 12C25.9491 11.2678 26.1337 9.94576 26.3594 9.05085C26.6055 8.15593 27.0773 6.87458 27.4465 6.20339C27.8158 5.5322 28.6158 4.4339 29.2516 3.76271C29.8875 3.09153 30.8927 2.21695 31.508 1.83051C32.1029 1.44407 33.3337 0.874576 34.2568 0.569492C35.5901 0.122034 36.267 0 37.8465 0V0ZM33.5388 4.69831C33.026 5.00339 32.226 5.67458 31.7337 6.22373C31.2414 6.77288 30.626 7.68813 30.3388 8.23729C30.0722 8.80678 29.7234 9.84407 29.6004 10.5763C29.4157 11.5932 29.4157 12.2237 29.6004 13.322C29.7234 14.0949 30.0722 15.2136 30.3388 15.7627C30.6055 16.3322 31.2824 17.2678 31.8363 17.878C32.5132 18.6305 33.2927 19.1797 34.3388 19.7085C35.8157 20.4 35.9593 20.4407 38.0516 20.4407C40.0619 20.4407 40.308 20.4 41.5388 19.8102C42.2772 19.4441 43.3644 18.6915 43.9388 18.122C44.5747 17.5119 45.2721 16.5559 45.6413 15.8237C45.9695 15.1119 46.3593 13.9525 46.4823 13.2203C46.6464 12.2441 46.6464 11.5729 46.4823 10.678C46.3593 10.0068 45.9695 8.88813 45.6413 8.19661C45.2926 7.48475 44.5952 6.4678 44.0413 5.93898C43.508 5.38983 42.4618 4.65763 41.6413 4.27119C40.3901 3.66102 39.9798 3.55932 38.3593 3.49831C36.9849 3.45763 36.2465 3.53898 35.4875 3.80339C34.9132 4.00678 34.0516 4.41356 33.5388 4.69831Z" fill="#E84F13"/>
+                                <path id="square" fill-rule="evenodd" clip-rule="evenodd" d="M78.0514 1.01709H100V22.7798H78.0514V1.01709ZM81.3334 19.5256H96.9231V4.27133H81.3334V19.5256Z" fill="#D591BD"/>
+                                <path id="X" d="M63.0771 9.66089C56.472 3.11174 54.5233 1.22021 54.4618 1.22021C54.4002 1.22021 53.8464 1.70835 53.231 2.29818C52.6156 2.88801 52.1438 3.4575 52.1643 3.5592C52.1849 3.68123 54.0925 5.63377 56.4105 7.93208L60.6156 12.1016C54.2566 18.4067 52.4105 20.3185 52.4105 20.4406C52.431 20.5626 52.8413 21.1321 53.3336 21.7016C53.8464 22.2914 54.3797 22.7795 54.5028 22.7795C54.6464 22.7795 56.6361 20.9287 58.913 18.6507L63.0771 14.5422C69.5181 20.9287 71.4668 22.7795 71.5899 22.7795C71.713 22.7795 72.3078 22.2711 72.9232 21.6609L74.0514 20.5422L65.5386 12.1016L74.1335 3.5592C72.4719 1.83038 71.9181 1.28123 71.795 1.24055C71.6925 1.22021 69.6822 3.0914 67.3438 5.41005L63.0771 9.66089Z" fill="#A1A9D5"/>
+                                </g>
+                            </svg>
+                        </span >
+                    </li>
+                   
+                </ul>
+
+               
+               
+            </nav>
+
+            <div class="profiles">
+                <div class="profile-1">
+                    <img class="img-profile-1" src="./assets/img/image-profile1.png" alt="">
+                    <span id="id-profile">Gyiu790</span>
+                </div>
+                <div></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <main>
+        
+    </main>
+
+
+
+
+    
+   
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js"></script>
+   
+</body> 
+</html>

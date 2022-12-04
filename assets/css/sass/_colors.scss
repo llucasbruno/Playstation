@@ -1,0 +1,42 @@
+//colors of project
+
+//primary colors
+
+$primary-blue: #0070CC;
+$secondary-blue: #0155CF;
+$dark-blue1: #0C379F;
+$dark-blue2: #021E62;
+
+//white colors
+
+$primary-white: #FCFEFF;
+$secondary-white: #E8ECF4;
+$dark-white: #D4D7DC;
+
+//black colors
+
+$primary-black: #17181A;
+$secondary-black: #111213;
+$dark-black: #01070E;
+
+//gray colors
+
+$gray1:#818389;
+$gray2:#4A4F59;
+
+
+//auxyliari colors
+
+$dark-yellow: #FBC407;
+$light-yellow: #F8E84D;
+
+
+
+
+
+
+
+
+.gradient-blue {
+    background: linear-gradient(270deg, $secondary-blue 5.68%, $primary-blue 100%);
+}
