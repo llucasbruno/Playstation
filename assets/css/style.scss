@@ -14,14 +14,19 @@
 
 html {
     scroll-behavior: smooth;
+   
+    
 }
 
 
+.none {
+    display: none;
+}
 
 body {
     background-color: $primary-white;
     position: relative;
-    height: 1400vh;
+    overflow-x: hidden;
     width: 100%;
 
     @include responsive(m) {

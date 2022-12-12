@@ -10,6 +10,8 @@ let headerScroll = document.querySelector('.header-row');
 
 
 
+
+
 let menuBar = gsap.timeline({paused:true});
 
 //bars menu animations
@@ -147,10 +149,9 @@ tl.reverse();
 
 menuToggle.addEventListener('click', ()=> {
     menuHamburger.classList.toggle('active');
-	headerScroll.style.backgroundColor = "transparent";
+	headerScroll.classList.toggle('bg-transparent');
 	
-
-
+	
     psLogo.classList.toggle('active');
 	//navMenu.classList.toggle('active-menu-ps')	
     menuBar.reversed(!menuBar.reversed());
@@ -252,4 +253,71 @@ function ShowDropDown2(e) {
 
 menuLinkDropDown1.addEventListener('click', ShowDropDown1)
 menuLinkDropDown2.addEventListener('click', ShowDropDown2)
+
+
+//layout prject js
+
+
+
+const activeClass = 'active';
+const buttons = document.querySelectorAll('.preview-element');
+let activeId = null;
+
+let timer = startTimer()
+
+
+
+
+buttons.forEach(button => {
+	button.addEventListener('click', ($event) => {
+		select($event.target.dataset.slide)
+		
+	});
+});
+
+
+function startTimer() {
+	return setInterval(()=> {
+		const nextButton = getActiveButton().nextElementSibling || buttons[0];
+
+		if(nextButton) {
+			select(nextButton.dataset.slide)
+		}
+
+	}, 5000)
+}
+
+function select(slideId) {
+	
+	
+	if(activeId === slideId) {
+		return;
+	}
+	
+
+	removeActiveButton()
+	addActiveButton(slideId)
+	activeId = slideId
+
+	clearInterval(timer);
+	timer = startTimer()
+	
+	
+}
+
+function addActiveButton(id) {
+	const buttonSlide = document.querySelector(`[data-slide="${id}"]`);
+	buttonSlide.classList.add(activeClass)
+}
+
+
+function getActiveButton() {
+	return document.querySelector(`.preview-element.${activeClass}`)
+}
+
+
+function removeActiveButton() { //remove aclaas of active button
+	getActiveButton().classList.remove(activeClass)
+}
+
 

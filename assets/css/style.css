@@ -53,14 +53,247 @@ h3 {
   }
 }
 
+.ps-slider {
+  display: flex;
+  flex-direction: column;
+  max-width: 100vw;
+  margin-top: calc(15vh - 20px);
+}
+@media screen and (max-width: 960px) {
+  .ps-slider {
+    margin-top: calc(15vh - 2rem);
+  }
+}
+.ps-slider .ps-slider-view {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 60vh;
+}
+.ps-slider .ps-slider-view .slider-content {
+  opacity: 0;
+  transition: 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.ps-slider .ps-slider-view .slider-content .background {
+  width: 100vw;
+  height: 100%;
+}
+.ps-slider .ps-slider-view .slider-content .background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+}
+.ps-slider .ps-slider-view .slider-content.active {
+  opacity: 1;
+  z-index: 4;
+}
+.ps-slider .ps-slider-view .slider-content.active .info h3,
+.ps-slider .ps-slider-view .slider-content.active .info p,
+.ps-slider .ps-slider-view .slider-content.active .info .btn {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+.ps-slider .ps-slider-view .slider-content .info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 4rem;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.ps-slider .ps-slider-view .slider-content .info h3 {
+  color: #FCFEFF;
+  opacity: 0;
+  transform: translate(0, 5rem);
+  transition: 0.3s ease;
+}
+.ps-slider .ps-slider-view .slider-content .info p {
+  color: #FCFEFF;
+  opacity: 0;
+  transform: translate(0, 5rem);
+  padding: 16px 0;
+  transition: 0.4s ease;
+}
+.ps-slider .ps-slider-view .slider-content .info .btn {
+  opacity: 0;
+  transform: translate(0, 5rem);
+  transition: 0.5s ease;
+}
+.ps-slider .ps-slider-preview {
+  margin: 0 auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+@media screen and (max-width: 960px) {
+  .ps-slider .ps-slider-preview {
+    gap: 8px;
+  }
+}
+@media screen and (max-width: 960px) {
+  .ps-slider .ps-slider-preview {
+    gap: 4px;
+  }
+}
+.ps-slider .ps-slider-preview .preview-element {
+  display: flex;
+  align-items: center;
+  width: 244px;
+  height: 137px;
+  position: relative;
+  border: 3px solid #FCFEFF;
+  cursor: pointer;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  opacity: 0.8;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0px 0px 0px 2px rgba(1, 83, 207, 0);
+}
+@media screen and (max-width: 960px) {
+  .ps-slider .ps-slider-preview .preview-element {
+    width: 150px;
+    border-radius: 20px;
+    height: 90px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ps-slider .ps-slider-preview .preview-element {
+    width: 100px;
+    border-radius: 3px;
+    height: 50px;
+  }
+}
+.ps-slider .ps-slider-preview .preview-element:hover {
+  border: 3px solid #FCFEFF;
+  box-shadow: 0px 0px 0px 2px #0155CF;
+  filter: drop-shadow(0px 7px 4px rgba(2, 7, 26, 0.25));
+  opacity: 1;
+  border-radius: 20px;
+  transform: translateY(-2%);
+}
+@media screen and (max-width: 960px) {
+  .ps-slider .ps-slider-preview .preview-element:hover {
+    border-radius: 10px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .ps-slider .ps-slider-preview .preview-element:hover {
+    border-radius: 4px;
+  }
+}
+.ps-slider .ps-slider-preview .preview-element.active {
+  border-radius: 20px;
+  border: 3px solid #FCFEFF;
+  box-shadow: 0px 0px 0px 2px #0155CF;
+  opacity: 1;
+}
+@media screen and (max-width: 540px) {
+  .ps-slider .ps-slider-preview .preview-element.active {
+    border-radius: 4px;
+    border: 1px solid #FCFEFF;
+  }
+}
+.ps-slider .ps-slider-preview .preview-element.active .min-pic-btn img {
+  -webkit-animation: bounce 250ms ease forwards;
+          animation: bounce 250ms ease forwards;
+}
+.ps-slider .ps-slider-preview .preview-element.active::after {
+  -webkit-animation: progress 5.1s linear;
+          animation: progress 5.1s linear;
+  opacity: 1;
+}
+.ps-slider .ps-slider-preview .preview-element::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background: rgba(11, 55, 185, 0.596);
+  left: 0;
+  top: 0;
+  opacity: 0;
+  opacity: 350ms opacity ease-in-out;
+  z-index: 10;
+}
+.ps-slider .ps-slider-preview .preview-element .min-pic-btn {
+  width: 90px;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  position: absolute;
+  pointer-events: none;
+}
+@media screen and (max-width: 540px) {
+  .ps-slider .ps-slider-preview .preview-element .min-pic-btn {
+    width: 35px;
+  }
+}
+
+.p-bg-1 {
+  background-image: url(".././/./../img/tlou.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.p-bg-2 {
+  background-image: url(".././/./../img/spiderman.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.p-bg-3 {
+  background-image: url(".././/./../img/gow.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.p-bg-4 {
+  background-image: url(".././/./../img/horizonZD.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.p-bg-5 {
+  background-image: url(".././/./../img/overwatch.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+.none {
+  display: none;
 }
 
 body {
   background-color: #FCFEFF;
   position: relative;
-  height: 1400vh;
+  overflow-x: hidden;
   width: 100%;
 }
 @media screen and (max-width: 1140px) and (min-width: 960px) {
@@ -84,7 +317,7 @@ svg, img {
 
 #header {
   position: fixed;
-  z-index: 5;
+  z-index: 150;
   left: 0;
   top: 0;
   width: 100%;
@@ -92,8 +325,9 @@ svg, img {
 #header .header-row {
   align-items: center;
   display: flex;
+  background-color: #FCFEFF;
   justify-content: space-between;
-  padding: 30px;
+  padding: 25px 30px;
   transition: 0.4s ease;
 }
 @media screen and (max-width: 960px) {
@@ -105,6 +339,10 @@ svg, img {
 .header-row.active-header {
   background-color: #FCFEFF;
   padding: 15px 30px !important;
+}
+
+.header-row.bg-transparent {
+  background-color: transparent !important;
 }
 
 .brand-logo {
@@ -148,6 +386,7 @@ svg, img {
   display: none;
   transition: all 5s ease;
   opacity: 0;
+  position: relative;
 }
 
 .navmenu .navmenu-ul {
@@ -179,10 +418,12 @@ svg, img {
 .fullpage-menu {
   display: none;
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   height: 100vh;
   width: 100%;
+  pointer-events: none;
 }
 
 .fullpage-menu-inner {
@@ -282,6 +523,8 @@ svg, img {
   align-items: center;
   cursor: pointer;
   display: flex;
+  position: relative;
+  pointer-events: all;
 }
 
 .logout > span {
@@ -385,8 +628,8 @@ svg, img {
 
 .dropdown-menu-bg {
   display: none;
-  -webkit-animation: downmenu 0.4s ease-in-out;
-          animation: downmenu 0.4s ease-in-out;
+  -webkit-animation: downmenu 0.4s ease-in-out forwards;
+          animation: downmenu 0.4s ease-in-out forwards;
   position: absolute;
   width: 100vw;
   height: 100%;
@@ -416,8 +659,8 @@ svg, img {
   height: 180px;
   transition: 0.4s ease;
   border-radius: 3px;
-  -webkit-animation: showfade 1s ease-in-out;
-          animation: showfade 1s ease-in-out;
+  -webkit-animation: showfade 1s ease-in-out forwards;
+          animation: showfade 1s ease-in-out forwards;
 }
 .dropdown-item:hover {
   box-shadow: 0px 0px 8px 1px rgba(23, 24, 26, 0.22);
@@ -532,6 +775,7 @@ svg, img {
   100% {
     height: 100%;
     opacity: 1;
+    background-color: #FCFEFF;
   }
 }
 @keyframes downmenu {
@@ -542,6 +786,45 @@ svg, img {
   100% {
     height: 100%;
     opacity: 1;
+    background-color: #FCFEFF;
+  }
+}
+@-webkit-keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .ps-logo {
