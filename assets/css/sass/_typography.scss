@@ -26,11 +26,11 @@
 
     //h3
     @else if $size == h3 and $device == desktop  {
-        font-size: 1.2rem;
+        font-size: 2rem;
         line-height: 100%;
     } 
     @else if $size == h3 and $device == mobile  {
-        font-size: 1rem;
+        font-size: 1.5rem;
         line-height: 110%;
     }
 }
@@ -90,4 +90,13 @@ h3 {
         @include typeface-1(h3, mobile);
     }
     
+}
+
+
+p {
+    @include typeface-2(p2, desktop);
+    
+    @include responsive(s) {
+        @include typeface-2(p2, mobile);
+    }
 }

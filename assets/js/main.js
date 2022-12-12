@@ -15,6 +15,7 @@ let headerScroll = document.querySelector('.header-row');
 let menuBar = gsap.timeline({paused:true});
 
 //bars menu animations
+//gsap start
 
 menuBar.to('.bar-1', 0.5,{
 	attr:{d: "M8,2 L2,8"},
@@ -158,7 +159,7 @@ menuToggle.addEventListener('click', ()=> {
 	tl.reversed(!tl.reversed());
 });
 
-//----
+//gsap ends
 
 
 //date
@@ -191,7 +192,8 @@ function scrollHeader() {
 window.addEventListener('scroll', scrollHeader);
 
 
-//drop menu
+//Drop menu
+
 const menuLinkDropDown1 = document.getElementById('menu-link1');
 const menuLinkDropDown2 = document.getElementById('menu-link2');
 
@@ -255,17 +257,15 @@ menuLinkDropDown1.addEventListener('click', ShowDropDown1)
 menuLinkDropDown2.addEventListener('click', ShowDropDown2)
 
 
-//layout prject js
 
 
+//main sliders js
 
 const activeClass = 'active';
+const previewClass = 'preview';
 const buttons = document.querySelectorAll('.preview-element');
 let activeId = null;
-
 let timer = startTimer()
-
-
 
 
 buttons.forEach(button => {
@@ -288,12 +288,13 @@ function startTimer() {
 }
 
 function select(slideId) {
-	
-	
+
 	if(activeId === slideId) {
 		return;
 	}
 	
+	removeActiveSlide()
+	setNextSlidePreview(slideId)
 
 	removeActiveButton()
 	addActiveButton(slideId)
@@ -302,7 +303,27 @@ function select(slideId) {
 	clearInterval(timer);
 	timer = startTimer()
 	
-	
+}
+
+
+function setActiveSlide(id) {
+	const slide = document.querySelector(`#slider-${id}`);
+	slide.classList.add(activeClass)
+
+}
+
+function setNextSlidePreview(id) {
+	const preview = document.querySelector(`#slider-${id}`)
+	preview.classList.add(previewClass)
+	setTimeout(() => {
+		setActiveSlide(id)
+		preview.classList.remove(previewClass)
+	}, 250 )
+}
+
+function removeActiveSlide() {
+	const slide = document.querySelector(`.slider-content.${activeClass}`);
+	slide.classList.remove(activeClass)
 }
 
 function addActiveButton(id) {

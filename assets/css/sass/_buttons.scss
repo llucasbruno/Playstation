@@ -1,0 +1,80 @@
+// buttons 
+
+.border-button {
+    position: relative;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 16px;
+   
+
+    &::before {
+        position: absolute;
+        content: '';
+        opacity: .7;
+        width: calc(100% + 0.9rem);
+        height: 100%;
+        top: -1.2rem;
+        left: -0.5rem;
+        border: 1px solid $primary-white;
+        border-bottom: none;
+        pointer-events: none;
+    }
+    &::after {
+        position: absolute;
+        content: '';
+        opacity: .7;
+        width: calc(100% + 0.9rem);
+        height: 100%;
+        bottom: -1.2rem;
+        left: -0.5rem;
+        border: 1px solid $primary-white;
+        border-top: none;
+        pointer-events: none;
+        
+    }
+
+    
+}
+
+.primary-button {
+    cursor: pointer;
+    color: $primary-black;
+    background-color: $primary-white;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: .05rem;
+    border: 1px solid $primary-white;
+    position: relative;
+    padding: .7rem 4rem;
+    background-image: url('.././/./../img/Vector.svg');
+    background-size: 130%;
+    background-position: 500%;
+    background-repeat: no-repeat;
+    transition: .3s ease-in-out;
+    transition-property: background-position, border, color;
+
+    &:hover {
+        border: 1px solid transparent;
+        color: $primary-white;
+        background-position: 50%;
+    }
+
+    &::before {
+        background-color: $primary-blue;
+        content: '';
+        position: absolute;
+        height: 0.3rem;
+        width: 0.3rem;
+        right: -1px; bottom: -1px;
+        transition: background-color 0.15s ease-in-out
+    }
+  
+
+    &:hover {
+        &::before {
+            background-color: rgb(255, 255, 255);
+        }
+    }
+}
+

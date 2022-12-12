@@ -14,13 +14,14 @@
 
 html {
     scroll-behavior: smooth;
-   
-    
 }
 
-
-.none {
-    display: none;
+html::-webkit-scrollbar {
+    width: .9rem;
+    background-color: $secondary-white;
+}
+html::-webkit-scrollbar-thumb {
+    background-color: $dark-white;
 }
 
 body {
@@ -28,10 +29,6 @@ body {
     position: relative;
     overflow-x: hidden;
     width: 100%;
-
-    @include responsive(m) {
-        background-color: aquamarine;
-    }
 }
 
 svg, img {

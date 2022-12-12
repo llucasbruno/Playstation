@@ -269,10 +269,16 @@
 
     @include responsive(s) {
         transform: rotate(-145deg);
-        width: 900px;
-        top: 45%;
-        left: -70%;
-    
+        width: 1200px;
+        top: 10%;
+        left: -40%;
+    }
+
+    @include responsive(xs) {
+        transform: rotate(-145deg);
+        width: 1000px;
+        top: 40%;
+        left: -50%;
     }
    
     svg {
@@ -310,6 +316,7 @@
         width: 100px;
         border-radius: 20px;
         background: transparent;
+       
     }
 
     @include responsive(xs) {
@@ -372,12 +379,11 @@
     display: flex;
     justify-content: center;
     margin-top: 5px;
-    padding: 10px;
+    padding: 16px 0px;
     left: 0;
     position: absolute;
     width: 100vw;
     gap: 32px;
-  
 }
 
 .dropdown-item {
@@ -393,7 +399,6 @@
 
     &:hover {
         box-shadow: 0px 0px 8px 1px rgba(23, 24, 26, 0.22);
-        
     }
     
 }
